@@ -1,0 +1,6 @@
+{
+  "name": "Conversor de Planilha ODS para CSV",
+  "description": "Converta planilhas .ods e .xlsx para o formato CSV exato exigido pelo sistema de destino, com cabeçalhos padronizados e formatação de CPF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
