@@ -94,8 +94,8 @@ export const VerificationStep: React.FC<VerificationStepProps> = ({
         </div>
 
         {/* Quick Metrics Counters */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-          <div className="bg-white px-3.5 py-2 rounded-lg shadow-xs border border-[#bccac0]/25 flex flex-col">
+        <div className="flex flex-wrap items-center gap-2.5">
+          <div className="bg-white px-3.5 py-2 rounded-lg shadow-xs border border-[#bccac0]/25 flex flex-col min-w-[140px]">
             <span className="text-[11px] text-[#3d4a42] font-mono">Total Carregado</span>
             <span className="text-sm font-bold text-[#131b2e] flex items-center gap-1.5 mt-0.5 font-mono">
               <span className="w-2 h-2 rounded-full bg-[#006591]"></span>
@@ -103,27 +103,27 @@ export const VerificationStep: React.FC<VerificationStepProps> = ({
             </span>
           </div>
 
-          <div className="bg-white px-3.5 py-2 rounded-lg shadow-xs border border-[#bccac0]/25 flex flex-col">
-            <span className="text-[11px] text-[#3d4a42] font-mono">Conformidade</span>
-            <span className="text-sm font-bold text-[#006948] flex items-center gap-1.5 mt-0.5 font-mono">
-              <span className="w-2 h-2 rounded-full bg-[#006948]"></span>
-              {validCount} validados
+          <div
+            className={`px-3.5 py-2 rounded-lg shadow-xs flex flex-col min-w-[140px] transition-colors border ${
+              invalidCount > 0
+                ? 'bg-[#ffdad6] border-[#ba1a1a]/40 text-[#93000a]'
+                : 'bg-white border-[#bccac0]/25 text-[#131b2e]'
+            }`}
+          >
+            <span className={`text-[11px] font-mono ${invalidCount > 0 ? 'text-[#93000a] font-semibold' : 'text-[#3d4a42]'}`}>
+              Inconsistências
             </span>
-          </div>
-
-          <div className="bg-white px-3.5 py-2 rounded-lg shadow-xs border border-[#bccac0]/25 flex flex-col">
-            <span className="text-[11px] text-[#3d4a42] font-mono">Inconsistências</span>
-            <span className={`text-sm font-bold flex items-center gap-1.5 mt-0.5 font-mono ${invalidCount > 0 ? 'text-[#ba1a1a]' : 'text-[#131b2e]'}`}>
-              <span className={`w-2 h-2 rounded-full ${invalidCount > 0 ? 'bg-[#ba1a1a]' : 'bg-[#6d7a72]'}`}></span>
-              {invalidCount} erros
-            </span>
-          </div>
-
-          <div className="bg-white px-3.5 py-2 rounded-lg shadow-xs border border-[#bccac0]/25 flex flex-col">
-            <span className="text-[11px] text-[#3d4a42] font-mono">Esquema Alvo</span>
-            <span className="text-sm font-bold text-[#006591] flex items-center gap-1.5 mt-0.5 font-mono">
-              <span className="w-2 h-2 rounded-full bg-[#39b8fd]"></span>
-              7 colunas oficiais
+            <span
+              className={`text-sm font-bold flex items-center gap-1.5 mt-0.5 font-mono ${
+                invalidCount > 0 ? 'text-[#ba1a1a]' : 'text-[#131b2e]'
+              }`}
+            >
+              <span
+                className={`w-2 h-2 rounded-full ${
+                  invalidCount > 0 ? 'bg-[#ba1a1a] animate-pulse' : 'bg-[#6d7a72]'
+                }`}
+              ></span>
+              {invalidCount} {invalidCount === 1 ? 'erro' : 'erros'}
             </span>
           </div>
         </div>

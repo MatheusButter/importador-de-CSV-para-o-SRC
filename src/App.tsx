@@ -261,14 +261,6 @@ export default function App() {
               Sistema de Registro e Conversão de Dados Acadêmicos (SRC)
             </p>
           </div>
-          <div className="flex items-center gap-3 font-mono text-[11px] text-[#6d7a72]">
-            <span className="flex items-center gap-1 text-[#006948] font-semibold">
-              <span className="material-symbols-outlined text-[15px]">verified</span>
-              Padronização RFC 4180 (UTF-8)
-            </span>
-            <span>•</span>
-            <span>Compatível com LibreOffice Calc e MS Excel</span>
-          </div>
         </div>
       </footer>
 

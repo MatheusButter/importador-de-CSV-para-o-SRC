@@ -58,7 +58,7 @@ export const ImportStep: React.FC<ImportStepProps> = ({
 
   return (
     <div className="flex flex-col w-full max-w-[960px] mx-auto space-y-6">
-      {/* Title & Engine status */}
+      {/* Title */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <div className="flex items-center gap-1.5 text-[#006948] font-mono text-[11px] uppercase tracking-wider mb-1 font-semibold">
@@ -71,13 +71,6 @@ export const ImportStep: React.FC<ImportStepProps> = ({
           <p className="text-sm text-[#3d4a42] mt-1">
             Envie ou substitua a planilha de dados (<span className="font-mono text-[#006948] font-semibold">.ods</span>, <span className="font-mono text-[#131b2e]">.xlsx</span> ou <span className="font-mono text-[#131b2e]">.xls</span>) gerada para os certificados e registros acadêmicos do Ifes.
           </p>
-        </div>
-
-        <div className="flex items-center gap-2 bg-[#eaedff] px-3.5 py-1.5 rounded-xl shadow-xs self-start md:self-auto shrink-0 border border-[#bccac0]/25">
-          <div className="w-2.5 h-2.5 rounded-full bg-[#006948] animate-pulse"></div>
-          <span className="text-xs text-[#3d4a42] font-medium font-mono">
-            Motor de Análise: <strong className="text-[#131b2e]">RFC 4180 / LibreOffice V9</strong>
-          </span>
         </div>
       </div>
 
